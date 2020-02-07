@@ -18,6 +18,10 @@ public class FlightLine
     private String squawk;
     private String flightNumber;
 
+    public Integer getFlight_id() {
+        return flight_id;
+    }
+
     public String getHex() {
         return hex;
     }
