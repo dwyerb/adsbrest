@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import net.muroc.adsbrest.domain.FlightPoint;
 import net.muroc.adsbrest.repositories.FlightPointRepository;
 
+
 @Service
 public class FlightPointServiceImpl implements FlightPointService
 {
