@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import net.muroc.adsbrest.domain.FlightLine;
 import net.muroc.adsbrest.repositories.FlightLineRepository;
 
+import java.util.List;
+
 
 @Service
 public class FlightLineServiceImpl implements FlightLineService
@@ -39,5 +41,11 @@ public class FlightLineServiceImpl implements FlightLineService
     public void deleteFlightLine(Integer id)
     {
         flightLineRepository.deleteById(id);
+    }
+
+    @Override
+    public List<FlightLine> searchFlightLines(String hex, String flightNumber, String squawk)
+    {
+        return flightLineRepository.findByHexAndFlightNumberAndSquawk(hex,flightNumber,squawk);
     }
 }

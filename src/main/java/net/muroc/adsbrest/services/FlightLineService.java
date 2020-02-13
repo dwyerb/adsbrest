@@ -2,6 +2,8 @@ package net.muroc.adsbrest.services;
 
 import net.muroc.adsbrest.domain.FlightLine;
 
+import java.util.List;
+
 public interface FlightLineService
 {
     Iterable<FlightLine> listAllFlightLines();
@@ -11,4 +13,6 @@ public interface FlightLineService
     FlightLine saveFlightLine(FlightLine flightLine);
 
     void deleteFlightLine(Integer id);
+
+    List<FlightLine> searchFlightLines(String hex, String flightNumber, String squawk);
 }

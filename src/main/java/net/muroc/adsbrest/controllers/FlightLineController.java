@@ -42,4 +42,7 @@ public class FlightLineController
     {
         return flightLineService.saveFlightLine(flightLine);
     }
+
+    //@GetMapping("search")
+    //public Iterable<FlightLine> searchFlights(){return flightLineService.findByHexAndFlightNumberAndSquawk(@PathVariable String )}
 }

@@ -1,7 +1,6 @@
 package net.muroc.adsbrest.domain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.sql.Timestamp;
 
 
@@ -16,10 +15,9 @@ public class FlightPoint
     @JoinColumn(name="flight_id")
     private FlightLine flightLine;
 
-    private int flight_line_id;
     private String hex;
     private String squawk;
-    private String flight_number;
+    private String flightNumber;
     private double lat;
     private double lon;
     private double nucp;
@@ -40,9 +38,6 @@ public class FlightPoint
         return this.flightLine;
     }
 
-    public void setFlight_line_id(int flight_line_id) {
-        this.flight_line_id = flight_line_id;
-    }
 
     public String getHex() {
         return hex;
@@ -60,12 +55,12 @@ public class FlightPoint
         this.squawk = squawk;
     }
 
-    public String getFlight_number() {
-        return flight_number;
+    public String getFlightNumber() {
+        return flightNumber;
     }
 
-    public void setFlight_number(String flight_number) {
-        this.flight_number = flight_number;
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
     }
 
     public double getLat() {
