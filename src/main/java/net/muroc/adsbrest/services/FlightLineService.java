@@ -14,5 +14,5 @@ public interface FlightLineService
 
     void deleteFlightLine(Integer id);
 
-    List<FlightLine> searchFlightLines(String hex, String flightNumber, String squawk);
+    List<FlightLine> searchFlightLines(String hex, String flight, String squawk);
 }

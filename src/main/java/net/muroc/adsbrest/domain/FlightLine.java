@@ -1,7 +1,6 @@
 package net.muroc.adsbrest.domain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Set;
 
 @Entity
@@ -16,7 +15,7 @@ public class FlightLine
 
     private String hex;
     private String squawk;
-    private String flightNumber;
+    private String flight;
 
     public Integer getFlight_id() {
         return flight_id;
@@ -38,11 +37,11 @@ public class FlightLine
         this.squawk = squawk;
     }
 
-    public String getFlightNumber() {
-        return flightNumber;
+    public String getFlight() {
+        return flight;
     }
 
-    public void setFlightNumber(String flightNumber) {
-        this.flightNumber = flightNumber;
+    public void setFlight(String flight) {
+        this.flight = flight;
     }
 }

@@ -10,9 +10,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 
 @Component
 public class FlightDataLoader implements ApplicationListener<ContextRefreshedEvent>
@@ -44,7 +41,7 @@ public class FlightDataLoader implements ApplicationListener<ContextRefreshedEve
 
         FlightLine flightLine = new FlightLine();
         flightLine.setHex(fl_Hex);
-        flightLine.setFlightNumber(fl_flightNumber);
+        flightLine.setFlight(fl_flightNumber);
         flightLine.setSquawk(fl_Squawk);
 
         flightLineRepository.save(flightLine);

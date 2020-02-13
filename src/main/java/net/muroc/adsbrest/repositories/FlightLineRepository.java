@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface FlightLineRepository extends CrudRepository<FlightLine,Integer>
 {
-    List<FlightLine> findByHexAndFlightNumberAndSquawk(String hex, String flightNumber, String squawk);
+    List<FlightLine> findByHexAndFlightAndSquawk(String hex, String flight, String squawk);
 }

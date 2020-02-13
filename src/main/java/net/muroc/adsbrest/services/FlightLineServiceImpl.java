@@ -44,8 +44,8 @@ public class FlightLineServiceImpl implements FlightLineService
     }
 
     @Override
-    public List<FlightLine> searchFlightLines(String hex, String flightNumber, String squawk)
+    public List<FlightLine> searchFlightLines(String hex, String flight, String squawk)
     {
-        return flightLineRepository.findByHexAndFlightNumberAndSquawk(hex,flightNumber,squawk);
+        return flightLineRepository.findByHexAndFlightAndSquawk(hex,flight,squawk);
     }
 }

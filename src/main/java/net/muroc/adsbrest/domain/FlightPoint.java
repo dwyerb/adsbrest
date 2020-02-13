@@ -27,7 +27,7 @@ public class FlightPoint
 
     private String hex;
     private String squawk;
-    private String flightNumber;
+    private String flight;
     private double lat;
     private double lon;
     private double nucp;
@@ -37,7 +37,16 @@ public class FlightPoint
     private int track;
     private int speed;
     private int messages;
-    private Timestamp timeStamp;
+
+    public long getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(long timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    private long timeStamp;
 
     public void setFlightLine(FlightLine flightLine)
     {
@@ -65,12 +74,12 @@ public class FlightPoint
         this.squawk = squawk;
     }
 
-    public String getFlightNumber() {
-        return flightNumber;
+    public String getFlight() {
+        return flight;
     }
 
-    public void setFlightNumber(String flightNumber) {
-        this.flightNumber = flightNumber;
+    public void setFlight(String flight) {
+        this.flight = flight;
     }
 
     public double getLat() {
