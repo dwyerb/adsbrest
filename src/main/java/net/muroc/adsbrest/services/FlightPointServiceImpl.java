@@ -52,12 +52,14 @@ public class FlightPointServiceImpl implements FlightPointService
             FlightLine returnedFlightLine = flightLineService.saveFlightLine(flightLine);
 
             int flight_line_id = returnedFlightLine.getFlight_id();
+            flightPoint.setFlight_line_id(flight_line_id);
             flightPoint.setFlightLine(returnedFlightLine);
         }
         else
         {
             FlightLine returnedFlightLine = flightLines.iterator().next();
             int flight_line_id = returnedFlightLine.getFlight_id();
+            flightPoint.setFlight_line_id(flight_line_id);
             flightPoint.setFlightLine(returnedFlightLine);
         }
         return flightPointRepository.save(flightPoint);

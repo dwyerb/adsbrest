@@ -56,6 +56,7 @@ public class FlightDataLoader implements ApplicationListener<ContextRefreshedEve
         flightPoint.setAltitude(14000);
         flightPoint.setLat(fl_lat);
         flightPoint.setLon(fl_lon);
+        flightPoint.setFlight_line_id(flightLine.getFlight_id());
         flightPoint.setFlightLine(flightLine);
 
         flightPointRepository.save(flightPoint);

@@ -15,6 +15,16 @@ public class FlightPoint
     @JoinColumn(name="flight_id")
     private FlightLine flightLine;
 
+    public int getFlight_line_id() {
+        return flight_line_id;
+    }
+
+    public void setFlight_line_id(int flight_line_id) {
+        this.flight_line_id = flight_line_id;
+    }
+
+    private int flight_line_id;
+
     private String hex;
     private String squawk;
     private String flightNumber;
