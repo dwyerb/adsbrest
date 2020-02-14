@@ -7,6 +7,10 @@ import java.sql.Timestamp;
 @Entity
 public class FlightPoint
 {
+    public Integer getFlight_pointId() {
+        return flight_pointId;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer flight_pointId;
